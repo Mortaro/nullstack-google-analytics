@@ -35,6 +35,8 @@ class Application extends Nullstack {
 export default Application;
 ```
 
+This component preconnects to *https://www.googletagmanager.com* and only adds the script tag once the application is hydrated to avoid blocking the first paint.
+
 ## License
 
 Nullstack Google Analytics is released under the [MIT License](https://opensource.org/licenses/MIT).

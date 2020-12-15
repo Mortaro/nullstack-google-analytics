@@ -20,12 +20,15 @@ class GoogleAnalytics extends Nullstack {
     })
   }
   
-  render({id}) {
+  render({id, self}) {
+    const domain = 'https://www.googletagmanager.com';
+    if(self.hydrated) {
+      return <script async src={`${domain}/gtag/js?id=${id}`} />
+    }
     return (
-      <script 
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
-      />
+      <head>
+        <link rel="preconnect" href={domain} />
+      </head>
     )
   }
 
