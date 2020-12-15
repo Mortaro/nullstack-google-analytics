@@ -1,5 +1,5 @@
 
-# Nullstack Google Pixel
+# Nullstack Google Analytics
 
 Nullstack wrapper for [Google Analytics](https://analytics.google.com)
 
