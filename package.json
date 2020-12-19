@@ -1,6 +1,6 @@
 {
   "name": "nullstack-google-analytics",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Nullstack wrapper for Google Analytics",
   "main": "src/GoogleAnalytics.njs",
   "author": "Mortaro",
