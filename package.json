@@ -1,8 +1,8 @@
 {
   "name": "nullstack-google-analytics",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Nullstack wrapper for Google Analytics",
-  "main": "src/GoogleAnalytics.njs",
+  "main": "src/GoogleAnalytics.jsx",
   "author": "Mortaro",
   "license": "MIT",
   "repository": "github:Mortaro/nullstack-google-analytics",
