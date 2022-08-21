@@ -1,10 +1,12 @@
 import Nullstack from 'nullstack';
 
+const domain = 'https://www.googletagmanager.com';
+
 class GoogleAnalytics extends Nullstack {
 
-  hydrate({router, page, id}) {
+  hydrate({ router, page, id }) {
     window.dataLayer = window.dataLayer || [];
-    function gtag(){
+    function gtag() {
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
@@ -19,15 +21,15 @@ class GoogleAnalytics extends Nullstack {
       })
     })
   }
-  
-  render({id, self}) {
-    const domain = 'https://www.googletagmanager.com';
-    if(self.hydrated) {
-      return <script async src={`${domain}/gtag/js?id=${id}`} />
-    }
+
+  render({ id }) {
     return (
       <head>
-        <link rel="preconnect" href={domain} />
+        {
+          this.hydrated
+            ? <script async src={`${domain}/gtag/js?id=${id}`} />
+            : <link rel="preconnect" href={domain} />
+        }
       </head>
     )
   }
